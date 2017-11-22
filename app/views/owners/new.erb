@@ -8,7 +8,9 @@
   <input type="text" name="owner[name]">
 
   <br></br>
-  <%= @pets %>
+  <% @pets.each do |pet| %>
+    <p><%= pet %></p>
+  <% end %>
     <br></br>
   <input type="submit" value="Create Owner">
 </form>
