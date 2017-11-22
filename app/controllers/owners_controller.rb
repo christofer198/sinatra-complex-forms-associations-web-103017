@@ -5,8 +5,9 @@ class OwnersController < ApplicationController
     erb :'/owners/index' 
   end
 
-  get '/owners/new' do 
-    erb :'/owners/new'
+  get '/owners/new' do
+    @pets = Pet.all
+    erb :'owners/new'
   end
 
   post '/owners' do 
